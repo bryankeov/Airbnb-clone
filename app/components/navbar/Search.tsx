@@ -7,8 +7,10 @@ export default function Search() {
     <div
       className="
         border-[1px]
-        w-full md:w-auto
-        py-2 rounded-full
+        w-full
+        md:w-auto
+        py-2
+        rounded-full
         shadow-sm
         hover:shadow-md
         transition
@@ -53,18 +55,12 @@ export default function Search() {
           items-center
           gap-3"
         >
-          <div
-            className="
-              hidden
-              sm-block"
-          >
-            Add Guests
-          </div>
+          <div className="hidden sm:block">Add Guests</div>
           <div
             className="
               p-2
             bg-rose-500
-            rounded-full
+              rounded-full
             text-white"
           >
             <BiSearch size={18} />
