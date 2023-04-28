@@ -1,6 +1,7 @@
 import { Nunito } from "next/font/google";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
+import Modal from "./components/modals/Modal";
 
 const font = Nunito({
   subsets: ["latin"],
@@ -8,9 +9,6 @@ const font = Nunito({
 export const metadata = {
   title: "Airbnb",
   description: "Airbnb clone using Next.js",
-  icons: {
-    icon: "/icon.png",
-  },
 };
 
 export default function RootLayout({
@@ -21,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
+        <Modal isOpen />
         <Navbar />
         {children}
       </body>
