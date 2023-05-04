@@ -20,6 +20,13 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
+
+  const onRent = useCallback(() => {
+    if (!currentUser) {
+      return loginModal.onOpen();
+    }
+  }, [currentUser, loginModal]);
+
   return (
     <div className="relative">
       <div
@@ -41,7 +48,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           hover:bg-neutral-100
           transition
           cursor-pointer"
-          onClick={() => {}}
+          onClick={onRent}
         >
           Airbnb your home
         </div>
