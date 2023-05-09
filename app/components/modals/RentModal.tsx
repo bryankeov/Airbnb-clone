@@ -27,7 +27,7 @@ enum STEPS {
 
 const RentModal = () => {
   const rentModal = useRentModal();
-  const router = useRouter;
+  const router = useRouter();
 
   const [step, setStep] = useState(STEPS.CATEGORY);
   const [isLoading, setIsLoading] = useState(false);
